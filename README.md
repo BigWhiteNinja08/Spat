@@ -18,3 +18,5 @@ Odpri `index.html` v brskalniku za ogled strani.
 
 ## Avtor
 Projekt za učenje spletnega razvoja.
+Repozitorij: https://github.com/BigWhiteNinja08/Spat
+Stran:
