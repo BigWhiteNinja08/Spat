@@ -1,0 +1,75 @@
+<!--
+<?php
+session_start();
+require("login.class.php");
+
+$errorMessage = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        $user = new LoginUser($_POST['username'], $_POST['password']);
+
+        if (isset($user->error)) {
+            $errorMessage = $user->error; // Store error for display
+        }
+    }
+}
+?>
+<style>
+<?php include 'D:\xampp\htdocs\gaia\styles\Prijava.css'; ?>
+</style>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">          
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava</title>
+    <link rel="stylesheet" href="Css\Prijava.css"> <!-- Relative path -->
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="get">  <!-- Ensure form posts data -->
+            
+            <h2>PRIJAVA</h2>
+
+
+                <p style="color: red;"></p>
+
+            <div class="input-group">
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <input type="text" name="username" placeholder="Uporabniško ime" required>
+            </div>
+
+            <div class="input-group">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" name="password" placeholder="Geslo" required>
+            </div>
+
+            <div class="forgot-pass">
+                <a href="#">Pozabljeno geslo?</a>
+            </div>
+
+            <button type="button" id="myButton" class="btn">PRIJAVI SE</button>
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "index.html";
+                };
+            </script>
+
+            <div class="sign-link">
+                <p>Nimaš računa? 
+                    <a href="Registracija.html" class="register-link">Registracija</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
